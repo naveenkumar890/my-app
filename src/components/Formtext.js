@@ -15,8 +15,8 @@ export default function Formtext(props) {
         setText(newText)
     }
     const htmlToJsx = () => {
-          let newText=text.replace(/class=/g, 'className=').replace(/for=/g, 'htmlFor=');
-          setText(newText)
+          let newText=text.replace(/class=/g, 'className=').replace(/for=/g, 'htmlFor=').replace(/<img([^>]*)>/g, '<img$1 />').replace(/<br([^>]*)>/g, '<br$1 />').replace(/<hr([^>]*)>/g, '<hr$1 />').replace(/<input([^>]*)>/g, '<input$1 />');
+        setText(newText)
     }
     const handleClearText = () => {
         let newText='';
