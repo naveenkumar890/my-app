@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 export default function Formtext(props) {
     
-    const [text, setText] = useState("Enter the text here");
+    const [text, setText] = useState();
     const [copied, setCopied] = useState(false);
     const handleUpClick = () => {
 
@@ -38,7 +38,7 @@ export default function Formtext(props) {
                 <h1>{props.heading}</h1>
                 <div className="container">
                     <div className="mb-3">
-                        <textarea className="form-control" value={text} onChange={handleOnClick} id="my-box" rows="8"></textarea>
+                        <textarea className="form-control" placeholder='Enter the text here' value={text} onChange={handleOnClick} id="my-box" rows="8"></textarea>
                     </div>
                 </div>
                 <button className="btn btn-primary" onClick={handleUpClick}>UpperCase</button>
